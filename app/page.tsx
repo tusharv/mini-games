@@ -67,6 +67,13 @@ export default function Home() {
       tags: ['focus', 'strategy', 'logic', 'classic', 'puzzle']
     },
     {
+      slug: 'snake',
+      title: 'Snake',
+      description: 'Guide the snake to collect food and grow longer in this nostalgic arcade classic!',
+      icon: '🐍',
+      tags: ['arcade', 'classic', 'reflexes', 'strategy', 'nostalgic']
+    },
+    {
       slug: 'tetris',
       title: 'Tetris',
       description: 'Arrange falling blocks to create lines and test your spatial awareness in this iconic game!',

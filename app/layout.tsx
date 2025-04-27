@@ -3,6 +3,7 @@ import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google';
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { Poppins } from 'next/font/google';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,6 +13,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '900'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -80,8 +87,12 @@ export default function RootLayout({
             }
           `}
         </Script>
+        <link
+          href="https://fonts.cdnfonts.com/css/nokia-cellphone-fc"
+          rel="stylesheet"
+        />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased ${poppins.className}`}>
         {children}
       </body>
     </html>
